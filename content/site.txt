@@ -1,17 +1,20 @@
-Title: Kirby Starterkit
+Title: Draftship
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: Rafael Polutta
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: Curated lifestyle publication for the minimalistic gentleman.
 
 ----
 
-Keywords: Kirby, CMS, file-based
+Keywords: Kirby,CMS,file-based,Draftship,Rafael Polutta,Hamburg,Curation,Minimalist,Gentleman,Design,Products,Lifestyle
 
 ----
 
-Copyright: © 2009-(date: Year) (link: http://getkirby.com text: Kirby)
+Copyright: 
+
+Made in Hamburg, Germany.
+© (date: Year) (link: http://draftship.com text: Draftship) by Rafael Polutta

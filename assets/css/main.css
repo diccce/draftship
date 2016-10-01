@@ -1,40 +1,21 @@
 /*
 
-Kirby Starterkit
+Draftship
 
-Author: Bastian Allgeier / Sascha Lack
-URL:    http://getkirby.com
-Email:  support@getkirby.com
+Author: Rafael Polutta
+URL:    http://draftship.com
+Email:  hello@gdraftship.com
 
 */
 
 
-/* Source Sans Pro
+/* Fira Sans
 -------------------------------------------------- */
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 300;
-  src: url(../fonts/sourcesanspro-300.woff) format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 400;
-  src: url(../fonts/sourcesanspro-400.woff) format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  src: url(../fonts/sourcesanspro-600.woff) format('woff');
-}
-@font-face {
-  font-family: 'Source Sans Pro';
-  font-style: italic;
-  font-weight: 400;
-  src: url(../fonts/sourcesanspro-400-italic.woff) format('woff');
-}
+@import 'https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,500,500i';
+
+/* Vollkorn
+-------------------------------------------------- */
+@import 'https://fonts.googleapis.com/css?family=Vollkorn:400,400i,700,700i';
 
 
 /* Reset
@@ -64,12 +45,12 @@ img {
 /* Links
 -------------------------------------------------- */
 a {
-  color: #000;
+  color: rgba(54,54,54,1);
   text-decoration: none;
   transition: color .3s, background .3s, border .3s;
 }
 a:hover {
-  color: red;
+  color: rgba(54,54,54,.5);
 }
 
 
@@ -86,7 +67,7 @@ a:hover {
 -------------------------------------------------- */
 html {
   height: 101%;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Fira Sans', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -94,52 +75,49 @@ body {
   margin: 0 auto;
   font-size: 1.25em;
   line-height: 1.5em;
-  padding: 1.5em;
-  max-width: 50em;
+  padding: 0;
   background: #fff;
-  color: #222;
+  color: rgba(54,54,54,1);
 }
 
 
 /* Header
 -------------------------------------------------- */
 .header {
-  border-bottom: 2px solid red;
-  margin-bottom: 1.5em;
-}
-.logo {
-  display: block;
-  margin-bottom: 1.5em;
-}
-.logo img {
-  width: 2em;
+  margin: 2em auto 4em;
 }
 
 
 /* Navigation
 -------------------------------------------------- */
+.menu {
+  text-align: center;
+}
 .menu a {
   display: block;
-  color: #222;
+  color: rgba(54,54,54,1);
 }
 .menu a:hover {
-  color: red;
+  color: rgba(54,54,54,.5);
   text-decoration: none;
 }
 .menu .active {
-  color: red;
+  color: rgba(54,54,54,.5);
 }
 .menu li {
   list-style: none;
+  display: inline-block;
 }
 .menu > li {
   position: relative;
 }
 .menu > li > a {
-  padding: .35em 0;
-  border-top: 1px solid #ddd;
-  font-weight: 600;
+  padding: .35em 1em;
+  border: 0;
 }
+.menu > li:hover .submenu {
+    display: block;
+  }
 
 .submenu {
   position: absolute;
@@ -163,7 +141,7 @@ body {
 .submenu a {
   padding: .5em 1.5em;
   font-size: .9em;
-  font-weight: 300;
+  font-weight: 400;
   color: #fff;
   background: #222;
   white-space: nowrap;
@@ -171,29 +149,6 @@ body {
 .submenu a:hover {
   background: #333;
   color: #fff;
-}
-
-@media screen and (min-width: 40em) {
-  body {
-    padding: 3em;
-  }
-  .logo {
-    float: left;
-  }
-  .menu {
-    float: right;
-    margin-right: -1em;
-  }
-  .menu > li {
-    float: left;
-  }
-  .menu > li > a {
-    padding: .35em 1em;
-    border: 0;
-  }
-  .menu > li:hover .submenu {
-    display: block;
-  }
 }
 
 
@@ -320,16 +275,9 @@ h1 a, h2 a, h3 a, h4 a {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  padding: 1em 0 6em;
+  padding: 1em 0 4em;
   font-size: .8em;
 }
 .copyright {
-  float: left;
-}
-.colophon {
-  float: right;
-}
-.colophon a b {
-  color: red;
-  padding-left: .25em;
+  text-align: center;
 }
