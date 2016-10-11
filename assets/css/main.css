@@ -47,10 +47,67 @@ img {
 a {
   color: rgba(54,54,54,1);
   text-decoration: none;
+  position: relative;
   transition: color .3s, background .3s, border .3s;
 }
-a:hover {
-  color: rgba(54,54,54,.5);
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -3px;
+  left: 0;
+  background-color: rgba(54,54,54,1);
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/* Button
+-------------------------------------------------- */
+.button {
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: all .3s ease-out;
+
+  height: 54px;
+  line-height: 54px;
+
+  text-decoration: none;
+  color: rgba(0,0,0,1);
+  background-color: rgba(255,255,255,1);
+  text-align: center;
+  transition: .2s ease-out;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 2em;
+  display: inline-block;
+  outline: 0;
+  padding: 0 2rem;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Time
+-------------------------------------------------- */
+time {
+  opacity: .5;
 }
 
 
@@ -84,7 +141,10 @@ body {
 /* Header
 -------------------------------------------------- */
 .header {
-  margin: 2em auto 4em;
+  height: 64px;
+  background-color: rgba(0,0,0,.2);
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -92,33 +152,43 @@ body {
 -------------------------------------------------- */
 .menu {
   text-align: center;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .1em
 }
 .menu a {
   display: block;
-  color: rgba(54,54,54,1);
+  color: rgba(255,255,255,.5);
+  /* mix-blend-mode: difference; */
 }
 .menu a:hover {
-  color: rgba(54,54,54,.5);
-  text-decoration: none;
+  color: rgba(255,255,255,1);
+  text-decoration: hidden;
+}
+.menu a:hover:before {
+  visibility: hidden;
 }
 .menu .active {
-  color: rgba(54,54,54,.5);
+  color: rgba(255,255,255,1);
 }
 .menu li {
   list-style: none;
   display: inline-block;
+  height: 64px;
+  line-height: 64px;
 }
 .menu > li {
   position: relative;
 }
 .menu > li > a {
-  padding: .35em 1em;
+  padding: .1em 1em;
   border: 0;
 }
+
+/*
 .menu > li:hover .submenu {
     display: block;
   }
-
 .submenu {
   position: absolute;
   z-index: 1;
@@ -150,15 +220,17 @@ body {
   background: #333;
   color: #fff;
 }
-
+*/
 
 /* Headings
 -------------------------------------------------- */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   line-height: 1.25em;
   font-weight: 400;
-  margin-bottom: .5em;
+  margin-bottom: .2em;
+  font-style: italic;
+  opacity: .7;
 }
 h2 {
   font-size: 2em;
@@ -237,22 +309,37 @@ h1 a, h2 a, h3 a, h4 a {
 
 /* Project teaser
 -------------------------------------------------- */
-.teaser {
-  list-style: none;
+.gallery-container {
+  position: relative;
+  top: -64px;
+  z-index: 0;
+  overflow: hidden;
+  height: 80vh;
+  max-height: 80%;
+  min-height: 540px;
+  width: 100%;
 }
-.teaser li {
-  margin-bottom: 1.5em;
-  list-style: none;
+.gallery-item {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
-@media screen and (min-width: 50em) {
-  .teaser li {
-    float: left;
-    width: 30%;
-    margin-left: 5%;
-  }
-  .teaser li:first-child {
-    margin-left: 0;
-  }
+.gallery-item-content {
+  position: absolute;
+  z-index: 1000;
+  top: 64%;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,1);
+}
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 
