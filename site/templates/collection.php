@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<figure class="header-bg black"></figure>
+<figure class="header-bg fiftythree"></figure>
 
   <main class="main" role="main">
 
