@@ -1,5 +1,5 @@
 <article class="gallery-container cf" data-analytics-region="hero">
-  <?php foreach(page('collection')->children()->visible()->limit(3) as $edition): ?>
+  <?php foreach(page('collection')->children()->visible() as $edition): ?>
     <a class="gallery-item" href="<?php echo $edition->url() ?>">
       <div class="gallery-item-content">
         
@@ -10,10 +10,16 @@
       </div>
 
       <div class="slide-progress"></div>
+
+      <?php foreach($edition->children()->images() as $image): ?>
+
+    <a href="<?php echo $image->url() ?>">
+      <img src="<?php echo $image->url() ?>" alt="">
+    </a>
+
+  <?php endforeach ?>
   
-      <?php if($image = $edition->images()->sortBy('sort', 'asc')->first()): ?>
-        <figure class="gallery-image" style="background-image: url('<?php echo $image->url() ?>');"></figure>
-      <?php endif ?>
+
     </a>
   <?php endforeach ?>
 </article>

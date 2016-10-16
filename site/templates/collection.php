@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
-<figure class="header-bg fiftythree"></figure>
+<figure class="header-bg black"></figure>
 
   <main class="main" role="main">
 
@@ -7,6 +7,8 @@
       <h1><?php echo $page->title()->html() ?></h1>
       <?php echo $page->text()->kirbytext() ?>
     </div>
+
+    <?php snippet('collection') ?>
 
   </main>
 

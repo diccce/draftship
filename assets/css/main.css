@@ -73,11 +73,29 @@ a:hover:before {
 /* Time
 -------------------------------------------------- */
 time {
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: .7em;
+  font-size: .8em;
   text-transform: uppercase;
   letter-spacing: .2em;
-  opacity: .6;
+  position: relative;
+}
+time:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -.3em;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+time:hover:before {
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
 }
 
 
@@ -136,7 +154,7 @@ body {
   text-align: center;
   font-size: .8em;
   text-transform: uppercase;
-  letter-spacing: .1em
+  letter-spacing: .2em;
 }
 .menu a {
   display: block;
@@ -209,10 +227,10 @@ body {
 h1 {
   font-size: 3em;
   line-height: 1.25em;
-  font-weight: 400;
-  margin-bottom: .2em;
-  font-style: italic;
-  opacity: .8;
+  font-weight: 500;
+  margin-bottom: .7em;
+  text-transform: uppercase;
+  letter-spacing: .25em;
 }
 h2 {
   font-size: 2em;
@@ -269,9 +287,9 @@ blockquote:before {
 -------------------------------------------------- */
 .main {
   margin: 2em auto;
-  width: 900px;
+  max-width: 900px;
+  width: 80%;
   padding-bottom: 1.5em;
-  border-bottom: 2px solid red;
 }
 .main hr {
   margin: 3em 0;
@@ -283,7 +301,7 @@ blockquote:before {
 .main ul,
 .main ol {
   margin-bottom: 1.5em;
-  padding: 0 3em;
+  padding: 0 5em;
 }
 .main a {
   color: #77EEDF;
@@ -300,7 +318,23 @@ blockquote:before {
   margin-left: 1em;
 }
 
-/* Project meta
+/* Masonry Layout
+-------------------------------------------------- */
+.masonry-layout {
+  column-count: 3;
+  column-gap: 0;
+}
+.masonry-layout__panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout__panel-content {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+/* Meta
 -------------------------------------------------- */
 .meta {
   margin-bottom: 1.5em;
@@ -340,7 +374,8 @@ blockquote:before {
 .gallery-item-content {
   position: absolute;
   z-index: 1000;
-  top: 72%;
+  top: 320px;
+  margin-top: 2em;
   width: 100%;
   text-align: center;
   color: rgba(255,255,255,1);
@@ -352,6 +387,18 @@ blockquote:before {
   background-position: top center;
   background-repeat: no-repeat;
 }
+/*
+.slide-progress {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 60px;
+  background-color: rgba(255,255,255,.2);
+  bottom: 1em;
+  left: 50%;
+  margin-left: -30px;
+}
+*/
 
 
 /* Next/Prev nav
