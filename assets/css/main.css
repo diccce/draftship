@@ -320,19 +320,18 @@ blockquote:before {
 
 /* Masonry Layout
 -------------------------------------------------- */
-.masonry-layout {
-  column-count: 3;
-  column-gap: 0;
+.flex-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.masonry-layout__panel {
-  break-inside: avoid;
-  padding: 5px;
+.col {
+  width: 32%;
+  margin-bottom: 2%;
+  flex: 0 0 auto;
 }
-.masonry-layout__panel-content {
-  padding: 10px;
-  border-radius: 10px;
-}
-
 
 /* Meta
 -------------------------------------------------- */

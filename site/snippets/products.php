@@ -1,8 +1,7 @@
-<div class="masonry-layout cf">
+<div class="flex-grid cf">
   <?php foreach(page('collection')->children()->children()->visible() as $product): ?>
-  <div class="masonry-layout__panel">
 
-    <div class="masonry-layout__panel-content">
+    <div class="col">
 
       <!--
       <h3><a href="<?php echo $product->url() ?>"><?php echo $product->title()->html() ?></a></h3>
@@ -17,6 +16,5 @@
 
     </div>
 
-  </div>
   <?php endforeach ?>
 </div>
