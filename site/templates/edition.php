@@ -1,5 +1,9 @@
 <?php snippet('header') ?>
-<figure class="header-bg black"></figure>
+<figure class="header-bg black">
+	<div id="fade">
+          <div class="snowfall"></div>
+        </div>
+</figure>
 
   <main class="main" role="main">
 

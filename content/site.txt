@@ -17,4 +17,4 @@ Keywords: Kirby,CMS,file-based,Draftship,Rafael Polutta,Hamburg,Curation,Minimal
 Copyright: 
 
 Made in Hamburg, Germany.
-© (date: Year) (link: http://draftship.com text: Draftship) by Rafael Polutta
+© (date: Year) Draftship by Rafael Polutta

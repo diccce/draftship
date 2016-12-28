@@ -12,6 +12,9 @@
       <div class="slide-progress"></div>
   
       <?php if($image = $edition->images()->sortBy('sort', 'asc')->first()): ?>
+        <div id="fade">
+          <div class="snowfall"></div>
+        </div>
         <figure class="gallery-image" style="background-image: url('<?php echo $image->url() ?>');"></figure>
       <?php endif ?>
     </a>
