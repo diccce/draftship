@@ -442,6 +442,20 @@ blockquote:before {
   min-height: 70%;
   width: 100%;
 }
+.gallery-collection {
+  position: relative;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
+  height: 30vh;
+  min-height: 20%;
+  width: 100%;
+  margin-top: 1em;
+}
+.gallery-collection .gallery-item-content {
+  top: 0;
+  margin-top: 6.5em;
+}
 .gallery-item {
   position: absolute;
   z-index: 1;
@@ -465,7 +479,7 @@ blockquote:before {
   background-position: top center;
   background-repeat: no-repeat;
 }
-.gallery-container a:hover:before, .gallery-container a:after {
+.gallery-container a:hover:before, .gallery-container a:after, .gallery-collection a:hover:before, .gallery-collection a:after  {
   visibility: hidden;
 }
 /*

@@ -1,5 +1,5 @@
-<article class="gallery-container cf" data-analytics-region="hero">
-  <?php foreach(page('collection')->children()->visible()->limit(3) as $edition): ?>
+<?php foreach(page('collection')->children()->visible()->flip() as $edition): ?>
+  <article class="gallery-collection scene_element scene_element--fadeindown cf">
     <a class="gallery-item" href="<?php echo $edition->url() ?>">
       <div class="gallery-item-content">
         
@@ -8,15 +8,10 @@
           <?php echo $edition->date('F, Y') ?>
         </time>
       </div>
-
-      <div class="slide-progress"></div>
   
       <?php if($image = $edition->images()->sortBy('sort', 'asc')->first()): ?>
-        <div id="fade">
-          <div class="snowfall"></div>
-        </div>
         <figure class="gallery-image" style="background-image: url('<?php echo $image->url() ?>');"></figure>
       <?php endif ?>
     </a>
-  <?php endforeach ?>
-</article>
+  </article>
+<?php endforeach ?>

@@ -1,5 +1,5 @@
 <?php snippet('header') ?>
 
-  <?php snippet('collection') ?>
+  <?php snippet('hero') ?>
 
 <?php snippet('footer') ?>
