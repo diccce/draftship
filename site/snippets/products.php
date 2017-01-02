@@ -1,5 +1,5 @@
 <div class="flex-grid cf">
-  <?php foreach(page('collection')->children()->visible()->children()->visible() as $product): ?>
+  <?php foreach(page()->children()->visible() as $product): ?>
 
     <div class="col">
 
